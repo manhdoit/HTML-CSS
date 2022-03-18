@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.df{
+    display: flex;
+}
+ul{
+    list-style: none;
+    min-width: 100%;
+    flex: 1;
+}
+a{
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid red;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    animation: changeColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+nav{
+    max-width: 900px;
+    margin: 0 auto;
+}
+li {
+    flex: 1;
+}
+
+.style-1 .subnav li{
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+    transition-property: transform, opacity;
+    transition-duration: calc(150ms*var(--index));
+    transition-delay: calc((30ms*var(--index)) - 300 );
+}
+li.style-1:hover .subnav li{
+    opacity: 1;
+    transform: rotateY(0) translateY(0);
+    transition-property: transform, opacity;
+    transition-duration: calc(150ms*var(--index));
+    transition-delay: calc((30ms*var(--index)) - 300 );
+}
+@keyframes style1 {
+    0% {
+        opacity: 1;
+        transform: rotateY(-90deg) translateY(30px) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0) translateY(0);
+    }
+}
+
+@keyframes style2 {
+    100% {
+        opacity: 0;
+        transform: rotateY(-90deg) translateY(30px);
+    }
+    0% {
+        transform: rotateY(0) translateY(0);
+        opacity: 1;
+        
+    }
+    
+}
+@keyframes changeColor{
+        0%   {
+            
+            background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+}
+    

@@ -1,0 +1,22 @@
+
+
+h1 {
+    font-size: 40px;
+    color: #333;
+    animation-name: changeFontSize;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 
+}
+@keyframes changeFontSize {
+    from {
+        font-size: 30px;
+        color: #333;
+    }
+    to {
+        font-size: 80px;
+        color: orange;
+    }
+}
+
