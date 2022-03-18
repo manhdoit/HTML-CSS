@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+:root{
+    --main-color:  
+    --base-font: 20px; 
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: ;
+}
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.block {
+    --main-color: blue;
+    font-size: var(--base-font);
+    color: var(--main-color) ;
+}
+img{
+    width: 100%;
+}
+.block-item {
+    padding: 20px;
+    margin: 30px 0;
+    background-color:olivedrab;
+    /* width: 100%;
+    height: 200px;
+    background-image: url('https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg');
+    background-repeat: ; */
+}
+
+.block-item:hover {
+    padding: 10px;
+    background: none;
+}
+
+
+
+
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: blue
+}

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gutter: 15px;
+}
+.df {
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.jc-between{
+    justify-content: space-between;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.container{
+    max-width: 1170px;
+}
+
+.unstyled {
+    list-style: none;
+}
