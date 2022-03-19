@@ -48,6 +48,12 @@ body{
 .center {
     text-align: center;
 }
+.pst-relative{
+    position: relative;
+}
+.index-2{
+    z-index: 2;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -135,35 +141,48 @@ img {
 }
 .header__nav {
     flex-direction: column;
+    
 }
-.btn--toggle__nav {
+.btn__toggle__nav {
     width: 34px;
     height: 34px;
     justify-content: space-around;
 }
-.btn--toggle__nav span {
+.btn__toggle__nav span {
     width: 34px;
     height: 4px;
     border-radius: var(--corner-radius);
     display: inline-block;
     background-color: #fff;
+    transition: all ease .3s;
+}
+.btn__toggle__nav.active span:nth-child(1){
+    transform: rotate(45deg) translate(8px, 8px)
+}
+.btn__toggle__nav.active span:nth-child(2){
+    transform: scale(0)
+}
+.btn__toggle__nav.active span:nth-child(3){
+    transform: rotate(-45deg) translate(8px, -8px)
 }
 .nav__linkItem {
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: bold;
     color: var(--main-color);
+    display: inline-block;
     padding-left: 18px;
     padding-right: 18px;
     text-decoration: none;
     text-transform: uppercase;
 }
-
 .btn__login {
     padding: 16px 67px;
     border: none;
 }
-
+.header__right .btn__login{
+    display: none;
+}
 .section__content__top {
     margin-bottom: 200px;
     background-image: url(images/crypto-home-bg.png);
@@ -177,8 +196,6 @@ img {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
 
 /* social icons */
 .social__link{
@@ -238,7 +255,62 @@ img {
     color: var(--color-secondary);
 
 }
+
+/* animation */
+
+@keyframes menuOn {
+    from { 
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 /* responsive */
+@media(max-width:991px) {
+    .header{
+        padding: 20px 30px;
+    }
+    .header__nav{
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 30px;
+        width: calc(100% - 60px);
+    }
+    .main__nav {
+        flex-direction: column;
+    }
+    .main__nav .nav__linkItem{
+        padding: 10px;
+        color: var(--force-ground-color)
+    }
+    .nav__item {
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition-property: transform, opacity, background-color, visibility;
+        transition-duration: .3s;
+        transition-delay: var(--delay);
+    }
+    .show .nav__item{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        transition-property: transform, opacity, background-color, visibility;
+        transition-duration: .3s;
+        transition-delay: var(--delay);
+    }
+    .login__mobile {
+        padding: 10px;
+    }
+    .login__mobile .btn__login{
+        width: 100%;
+    }
+}
 @media(min-width: 768px){
     [style*=--w-sm] {
         max-width: calc(100%/12*var(--w-sm));
