@@ -1,0 +1,9 @@
+:root {
+    --animate-duration: 2s;
+    --animate-delay: 0.9s;
+  }
+
+.d-grid{
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
