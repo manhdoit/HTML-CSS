@@ -1,0 +1,41 @@
+:root{
+    --gutter-x: 50px;
+    --gutter-y: 15px;
+}
+
+img{width: 100%;}
+
+.bb-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--gutter-x);
+    padding-right: var(--gutter-x);
+}
+.bb-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--gutter-x) * -1);
+    margin-right: calc(var(--gutter-x) * -1);
+}
+.bb-col {
+    flex: 1 0 0%;
+    padding: var(--gutter-x);
+}
+
+
+
+@media (min-width: 576px){
+    
+    .bb-col-sm-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }    
+}
+
+
+
+.slider--image {
+    width: 100%;
+}
+
+
